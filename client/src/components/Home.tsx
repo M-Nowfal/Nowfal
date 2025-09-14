@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -17,7 +17,7 @@ AOS.init({
   offset: 100,
 });
 
-const Home = () => {
+const Home = memo(() => {
 
    useEffect(() => {
     AOS.init({
@@ -42,6 +42,6 @@ const Home = () => {
       <Footer />
     </>
   );
-}
+});
 
 export default Home;

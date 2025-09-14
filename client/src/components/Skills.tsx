@@ -1,7 +1,8 @@
+import { memo } from "react";
 import LogoLoop from "./LogoLoop";
 import { useTheme } from "./ThemeProvider";
 
-const Skills = () => {
+const Skills = memo(() => {
 
   const { theme } = useTheme();
 
@@ -25,6 +26,7 @@ const Skills = () => {
         { img: "/skills/backend/nodejs.png", name: "Node.js" },
         { img: "/skills/backend/express.png", name: "Express.js" },
         { img: "/skills/backend/mongodb.png", name: "MongoDB" },
+        { img: "/skills/backend/rest-api.png", name: "REST API'S" },
       ]
     },
     {
@@ -35,6 +37,7 @@ const Skills = () => {
         { img: "/tools/chatgpt.png", name: "ChatGPT" },
         { img: "/tools/vercel.png", name: "Vercel" },
         { img: "/tools/vite.png", name: "Vite" },
+        { img: "/tools/git.png", name: "Git" },
         { img: "/tools/openrouterai.png", name: "OpenRouter" },
       ]
     }
@@ -110,6 +113,8 @@ const Skills = () => {
                       height={64}
                       alt={skill.name}
                       loading="lazy"
+                      decoding="async"
+                      fetchPriority="low"
                       className={`
                         object-contain group-hover:drop-shadow-xl transition-all duration-300 rounded-2xl 
                         drop-shadow-lg w-12 h-12 group-hover:scale-105
@@ -135,7 +140,7 @@ const Skills = () => {
         <div className="m-auto max-w-6xl relative overflow-hidden mb-10">
           <LogoLoop
             logos={familiarSkills[0]}
-            speed={120}
+            speed={100}
             direction="left"
             logoHeight={48}
             gap={70}
@@ -143,13 +148,13 @@ const Skills = () => {
             scaleOnHover
             fadeOut
             fadeOutColor={theme === "dark" ? "#020618" : "#ffffff"}
-            ariaLabel="Technology partners"
+            ariaLabel="Familiar skills"
           />
         </div>
         <div className="m-auto max-w-6xl relative overflow-hidden">
           <LogoLoop
             logos={familiarSkills[1]}
-            speed={120}
+            speed={100}
             direction="right"
             logoHeight={48}
             gap={70}
@@ -157,12 +162,12 @@ const Skills = () => {
             scaleOnHover
             fadeOut
             fadeOutColor={theme === "dark" ? "#020618" : "#ffffff"}
-            ariaLabel="Technology partners"
+            ariaLabel="Familiar skills"
           />
         </div>
       </div>
     </section>
   );
-};
+});
 
 export default Skills;

@@ -1,4 +1,5 @@
 import { ExternalLink } from 'lucide-react';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 
 interface ProjectType {
@@ -12,7 +13,7 @@ interface ProjectType {
   technologies: string[];
 };
 
-const ProjectCard = ({ project }: { project: ProjectType }) => {
+const ProjectCard = memo(({ project }: { project: ProjectType }) => {
   // Determine badge color based on category
   const getCategoryColor = (category: string) => {
     switch (category.toLowerCase()) {
@@ -57,6 +58,8 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                   width={50}
                   height={50}
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                   className="w-full"
                 />
               </Link>
@@ -127,6 +130,6 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProjectCard;

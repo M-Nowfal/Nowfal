@@ -3,6 +3,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import VerifyAdmin from "./components/VerfyAdmin";
 import Home from "./components/Home";
+import ClickSpark from "./components/ClickSpark";
 
 interface AuthType {
   author: boolean;
@@ -27,9 +28,17 @@ const App = () => {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <AuthContext.Provider value={{ author, setAuthor }}>
-        <RouterProvider router={router} />
-      </AuthContext.Provider>
+      <ClickSpark
+        sparkColor="#FF6900"
+        sparkSize={10}
+        sparkRadius={15}
+        sparkCount={8}
+        duration={400}
+      >
+        <AuthContext.Provider value={{ author, setAuthor }}>
+          <RouterProvider router={router} />
+        </AuthContext.Provider>
+      </ClickSpark>
     </ThemeProvider>
   )
 }
