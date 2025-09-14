@@ -2,8 +2,11 @@ import { GraduationCap, Mail, Phone } from "lucide-react";
 import Typewriter from "typewriter-effect";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
+import SplitText from "./SplitText";
+import { useState } from "react";
 
 const Hero = () => {
+
   const floating_skills = [
     // Top row
     { src: "/skills/frontend/html.png", pos: "top-[10%] left-[35%]" },
@@ -11,16 +14,18 @@ const Hero = () => {
     { src: "/skills/frontend/react.png", pos: "top-[8%] left-[7%] w-25" },
 
     // Sides
-    { src: "/skills/frontend/js.png", pos: "top-[40%] left-[4%]" },
+    { src: "/skills/frontend/javascript.png", pos: "top-[40%] left-[4%]" },
     { src: "/skills/backend/nodejs.png", pos: "bottom-[25%] left-[6%]" },
     { src: "/skills/backend/express.png", pos: "top-[30%] right-[6%] dark:invert" },
     { src: "/skills/backend/mongodb.png", pos: "bottom-[35%] right-[8%]" },
 
     // Bottom row
-    { src: "/skills/frontend/ts.jpg", pos: "bottom-[12%] left-[20%]" },
+    { src: "/skills/frontend/typescript.png", pos: "bottom-[12%] left-[20%]" },
     { src: "/skills/frontend/css-3.png", pos: "bottom-[10%] left-[50%]" },
     { src: "/skills/frontend/nextjs.png", pos: "bottom-[10%] right-[15%] dark:invert" },
   ];
+
+  const [key, setKey] = useState<number>(0);
 
   return (
     <section id="hero" className="relative flex flex-col md:flex-row-reverse justify-center items-center gap-5 w-full min-h-svh md:p-0">
@@ -70,9 +75,22 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           className="text-4xl lg:text-6xl font-semibold text-center flex flex-col gap-7"
         >
-          <h1 className="text-4xl md:ms-5 lg:ms-0 sm:text-5xl md:text-7xl font-extrabold relative bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent drop-shadow-lg animate-pulse-slow">
-            Muhammed Nowfal
-          </h1>
+          <div role="button" onClick={() => setKey(prev => prev + 1)}>
+            <SplitText
+              key={key}
+              text="Muhammed Nowfal"
+              className="text-4xl md:ms-5 lg:ms-0 text-orange-500 sm:text-5xl md:text-7xl font-extrabold relative  drop-shadow-lg"
+              delay={100}
+              duration={2}
+              ease="elastic.out(1,0.3)"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+            />
+          </div>
           <h2 className="font-extrabold tracking-tight text-shadow-lg dark:text-shadow-gray-700">
             <Typewriter
               options={{

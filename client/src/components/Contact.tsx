@@ -7,6 +7,7 @@ import { Button } from "./ui/button";
 import axios, { AxiosError } from "axios";
 import { Input } from "./ui/input";
 import { AuthContext } from "@/App";
+import { Textarea } from "./ui/textarea";
 
 const Contact = () => {
 
@@ -45,7 +46,7 @@ const Contact = () => {
       setIsSubmitted(true);
     } catch (err: unknown) {
       const error = err instanceof AxiosError ? err.response?.data?.message : String(err);
-      setError(error);
+      setError(error || "Something went wrong, please try again later");
     } finally {
       setLoading(false);
     }
@@ -222,13 +223,12 @@ const Contact = () => {
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                       Your Message
                     </label>
-                    <textarea
+                    <Textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows={5}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 dark:bg-zinc-700/30 dark:text-white transition-colors"
                       placeholder="Tell me about your project or just say hello..."
                     />

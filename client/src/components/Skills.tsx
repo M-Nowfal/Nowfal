@@ -1,12 +1,18 @@
+import LogoLoop from "./LogoLoop";
+import { useTheme } from "./ThemeProvider";
 
 const Skills = () => {
+
+  const { theme } = useTheme();
+
   const skillCategories = [
     {
       name: "Frontend",
       skills: [
         { img: "/skills/frontend/html.png", name: "HTML" },
         { img: "/skills/frontend/css-3.png", name: "CSS" },
-        { img: "/skills/frontend/js.png", name: "JavaScript" },
+        { img: "/skills/frontend/javascript.png", name: "JavaScript" },
+        { img: "/skills/frontend/typescript.png", name: "TypeScript" },
         { img: "/skills/frontend/react.png", name: "React" },
         { img: "/skills/frontend/nextjs.png", name: "Next.js" },
         { img: "/skills/frontend/tailwind-css.png", name: "Tailwind CSS" },
@@ -34,18 +40,23 @@ const Skills = () => {
     }
   ];
 
-  const familiarWithSkills = [
-    { img: "/familiar-with/python.png", name: "Python" },
-    { img: "/familiar-with/java.png", name: "Java" },
-    { img: "/familiar-with/c++.png", name: "C++" },
-    { img: "/familiar-with/c.png", name: "C" },
-    { img: "/familiar-with/mysql.png", name: "SQL" },
-    { img: "/familiar-with/php.png", name: "PHP" },
-    { img: "/familiar-with/cs.png", name: "C#" },
+  const familiarSkills = [
+    [
+      { src: "/familiar-with/python.png", alt: "Python" },
+      { src: "/familiar-with/java.png", alt: "Java" },
+      { src: "/familiar-with/c++.png", alt: "C++" },
+      { src: "/familiar-with/c.png", alt: "C" }
+    ],
+    [
+      { src: "/familiar-with/mysql.png", alt: "SQL" },
+      { src: "/familiar-with/docker.png", alt: "Docker" },
+      { src: "/familiar-with/php.png", alt: "PHP" },
+      { src: "/familiar-with/cs.png", alt: "C#" }
+    ]
   ];
 
   const shouldInvert = (category: string, index: number): boolean => {
-    if (category === "Frontend" && index === 4)
+    if (category === "Frontend" && index === 5)
       return true;
     else if (category === "Backend" && index === 1)
       return true;
@@ -56,10 +67,10 @@ const Skills = () => {
   }
 
   return (
-    <section className="text-center pb-20 pt-10 px-4 sm:px-6 lg:px-8" id="skills">
+    <section className="text-center pt-10 px-4 sm:px-6 lg:px-8" id="skills">
       <div className="pt-10"></div>
       {/* Header with orange gradient */}
-      <div className="relative mb-16"  data-aos="fade-down">
+      <div className="relative mb-16" data-aos="fade-down">
         <div className="absolute -inset-4 bg-gradient-to-r from-orange-600/10 to-amber-600/10 blur-3xl opacity-75 rounded-full mx-auto w-3/4"></div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold relative bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent drop-shadow-lg animate-pulse-slow">
           My Skills
@@ -71,7 +82,7 @@ const Skills = () => {
       <div className="max-w-6xl mx-auto">
         {skillCategories.map(category => (
           <div key={category.name} className="mb-16">
-            <h2 className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500"  data-aos="fade-up">
+            <h2 className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500" data-aos="fade-up">
               {category.name}
             </h2>
 
@@ -118,34 +129,36 @@ const Skills = () => {
 
       {/* Familiar With Section */}
       <div className="mt-20">
-        <h2 className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500"  data-aos="fade-up">
+        <h2 className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500" data-aos="fade-up">
           Also Familiar With
         </h2>
-        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-          {familiarWithSkills.map((skill) => (
-            <figure
-              key={skill.name}
-              className="
-                flex items-center justify-center gap-2 px-5 py-2 bg-gradient-to-br from-orange-50 to-amber-50 
-                dark:from-orange-950/30 dark:to-amber-950/30 backdrop-blur-sm rounded-full shadow 
-                hover:shadow-orange-500/20 transition-all duration-300 border border-orange-200 
-                dark:border-orange-900/50 group dark:hover:bg-white/10 cursor-pointer
-              "
-              role="button"
-              onClick={() => navigator.vibrate && navigator.vibrate(50)}
-              data-aos="fade-up"
-            >
-              <img
-                src={skill.img}
-                width={64}
-                height={64}
-                alt={skill.name}
-                loading="lazy"
-                className="object-contain drop-shadow-md w-8"
-              />
-              <figcaption className="font-medium text-orange-900 dark:text-orange-200">{skill.name}</figcaption>
-            </figure>
-          ))}
+        <div className="m-auto max-w-6xl relative overflow-hidden mb-10">
+          <LogoLoop
+            logos={familiarSkills[0]}
+            speed={120}
+            direction="left"
+            logoHeight={48}
+            gap={70}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            fadeOutColor={theme === "dark" ? "#020618" : "#ffffff"}
+            ariaLabel="Technology partners"
+          />
+        </div>
+        <div className="m-auto max-w-6xl relative overflow-hidden">
+          <LogoLoop
+            logos={familiarSkills[1]}
+            speed={120}
+            direction="right"
+            logoHeight={48}
+            gap={70}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            fadeOutColor={theme === "dark" ? "#020618" : "#ffffff"}
+            ariaLabel="Technology partners"
+          />
         </div>
       </div>
     </section>
