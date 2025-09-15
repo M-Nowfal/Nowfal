@@ -44,7 +44,7 @@ const ProjectCard = memo(({ project }: { project: ProjectType }) => {
             {project.category}
           </div>
           {/* Overlay on hover */}
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-orange-600/10 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
+          <div className="absolute inset-0 bg-black/0 will-change-transform group-hover:bg-orange-600/10 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
             <div className="flex gap-4">
               <Link
                 to={project.githubUrl}

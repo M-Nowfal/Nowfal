@@ -6,7 +6,7 @@ import {
 import { Link } from "react-router-dom";
 
 const About = () => {
-  const cardStyles = "rounded-2xl p-8 shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 bg-white dark:bg-zinc-900/20 backdrop-blur-sm hover:scale-[1.02] hover:shadow-orange-600/20 hover:border-orange-600/30";
+  const cardStyles = "rounded-2xl p-8 shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 bg-white dark:bg-zinc-900/20 hover:scale-[1.02] will-change-transform hover:shadow-orange-600/20 hover:border-orange-600/30";
 
   return (
     <section id="about" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +15,7 @@ const About = () => {
       {/* Section Header with Animation */}
       <div className="text-center mb-16 relative" data-aos="fade-up">
         <div className="absolute -inset-4 bg-gradient-to-r from-orange-600/10 to-amber-600/10 blur-3xl opacity-75 rounded-full mx-auto w-3/4"></div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold relative bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent drop-shadow-lg animate-pulse-slow">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold relative bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent drop-shadow-lg">
           About Me
         </h1>
         <div className="w-24 h-2 bg-gradient-to-r from-orange-600 to-amber-600 rounded-full mx-auto mt-6 mb-4"></div>
