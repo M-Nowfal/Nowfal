@@ -22,7 +22,7 @@ const Projects = () => {
       title: "BrainBridge E-Learning Platform",
       category: "Advanced",
       description: "A MERN stack platform for sharing study materials, taking quizzes, tracking progress, and using AI-powered Q&A to support collaborative learning.",
-      image: "/projects/brain-bridge.jpg",
+      image: "/projects/brain-bridge.webp",
       githubUrl: "https://github.com/M-Nowfal/BrainBridge",
       liveUrl: "https://brain-bridge-psi.vercel.app/",
       technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "TypeScript"]
@@ -32,7 +32,7 @@ const Projects = () => {
       title: "FTC Finna Tuition Centre",
       category: "Advanced",
       description: "I built a web app for a tuition centre to manage student attendance, fee tracking, and faculty coordination. It provides a central dashboard for admins, making record-keeping easier, faster, and more transparent.",
-      image: "/projects/ftc.jpeg",
+      image: "/projects/ftc.webp",
       githubUrl: "https://github.com/M-Nowfal/finna-tuition-centre",
       liveUrl: "https://finna-tuition-centre-drab.vercel.app/",
       technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"]
@@ -42,7 +42,7 @@ const Projects = () => {
       title: "Byte-Cart E-Commerce Platform",
       category: "Advanced",
       description: "A full-featured e-commerce site using Next.js and MongoDB. Supports authentication and cart functions. Covers 50% of Amazon's core features, with server-side rendering for performance and SEO.",
-      image: "/projects/e-commerce.jpg",
+      image: "/projects/e-commerce.webp",
       githubUrl: "https://github.com/M-Nowfal/Byte-Cart",
       liveUrl: "http://byte-cart.vercel.app/",
       technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS", "Authentication"]

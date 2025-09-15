@@ -73,17 +73,12 @@ export function MessageView({ messages, toggleShowMessages, setMessages }: {
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4 will-change-transform"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <motion.div
-        className="bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-auto"
-        initial={{ scale: 0.9, y: 20 }}
-        animate={{ scale: 1, y: 0 }}
-        transition={{ type: "spring", damping: 25, stiffness: 300 }}
-      >
+      <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-auto">
         {/* Header */}
         <div className="p-5 bg-gradient-to-r from-orange-500 to-amber-500 text-white flex items-center">
           <div className="flex items-center gap-3">
@@ -107,13 +102,10 @@ export function MessageView({ messages, toggleShowMessages, setMessages }: {
             </div>
           ) : (
             <div className="space-y-4">
-              {messages.map((message, index) => (
-                <motion.div
+              {messages.map((message) => (
+                <div
                   key={message._id}
                   className="bg-white dark:bg-zinc-700/30 rounded-xl shadow-md p-5 border-l-4 border-orange-500"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                 >
                   {/* Message Header */}
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
@@ -219,12 +211,12 @@ export function MessageView({ messages, toggleShowMessages, setMessages }: {
                       </motion.button>
                     </div>
                   )}
-                </motion.div>
+                </div>
               ))}
             </div>
           )}
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };
