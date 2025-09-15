@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const connectWithMe = [
-    { icon: "/socialmedias/LinkedIn.png", url: "" },
-    { icon: "/tools/github.png", url: "https://github.com/M-Nowfal" },
-    { icon: "/socialmedias/email.png", url: "mailto:nowfalmmuhammed@gmail.com" },
-    { icon: "/socialmedias/whatsapp.png", url: "https://wa.me/8610297319?text=Hello%20Nowfal%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." },
+    { icon: "/socialmedias/LinkedIn.svg", url: "https://www.linkedin.com/in/muhammed-nowfal-m-452410344" },
+    { icon: "/tools/GitHub.svg", url: "https://github.com/M-Nowfal" },
+    { icon: "/socialmedias/gmail.svg", url: "mailto:nowfalmmuhammed@gmail.com" },
+    { icon: "/socialmedias/whatsapp.svg", url: "https://wa.me/8610297319?text=Hello%20Nowfal%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." },
   ];
 
   return (

@@ -53,7 +53,7 @@ const ProjectCard = memo(({ project }: { project: ProjectType }) => {
                 className="p-3 bg-white/90 rounded-full w-12 h-12 text-orange-600 hover:bg-orange-600 hover:text-white transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 opacity-0 group-hover:opacity-100"
               >
                 <img
-                  src={"/tools/github.png"}
+                  src={"/tools/GitHub.svg"}
                   alt={"Git-Hub link"}
                   width={50}
                   height={50}
@@ -106,7 +106,7 @@ const ProjectCard = memo(({ project }: { project: ProjectType }) => {
               className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-600 transition-colors"
             >
               <img
-                src={"/tools/github.png"}
+                src={"/tools/GitHub.svg"}
                 alt={"Git-Hub link"}
                 width={50}
                 height={50}

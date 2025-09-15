@@ -62,7 +62,7 @@ const Contact = () => {
       <div className="pb-10"></div>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16" data-aos="fade-down">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold relative bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent drop-shadow-lg animate-pulse-slow">
             Get In Touch
           </h1>
@@ -127,10 +127,10 @@ const Contact = () => {
               <h4 className="font-semibold text-gray-800 dark:text-white mb-4">Follow me on</h4>
               <div className="flex justify-center gap-4">
                 {[
-                  { name: "GitHub", icon: "/tools/github.png", url: "https://github.com/M-Nowfal" },
-                  { name: "LinkedIn", icon: "/socialmedias/LinkedIn.png", url: "https://www.linkedin.com/in/muhammed-nowfal-m-452410344" },
-                  { name: "What'sApp", icon: "/socialmedias/whatsapp.png", url: `https://wa.me/918610297319?text=Hello%20I%20am%20interested%20in%20your%20service` },
-                  { name: "Instagram", icon: "/socialmedias/insta.png", url: "https://www.instagram.com/its_nowfal/?__pwa=1" }
+                  { name: "GitHub", icon: "/tools/GitHub.svg", url: "https://github.com/M-Nowfal" },
+                  { name: "LinkedIn", icon: "/socialmedias/LinkedIn.svg", url: "https://www.linkedin.com/in/muhammed-nowfal-m-452410344" },
+                  { name: "What'sApp", icon: "/socialmedias/whatsapp.svg", url: `https://wa.me/918610297319?text=Hello%20I%20am%20interested%20in%20your%20service` },
+                  { name: "Instagram", icon: "/socialmedias/instagram.svg", url: "https://www.instagram.com/its_nowfal/?__pwa=1" }
                 ].map((social, index) => (
                   <Link
                     key={index}

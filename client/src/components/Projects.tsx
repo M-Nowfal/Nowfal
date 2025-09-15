@@ -64,7 +64,7 @@ const Projects = () => {
       <div className="py-5"></div>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <div className="relative mb-8"  data-aos="fade-down">
+          <div className="relative mb-8" data-aos="fade-up">
             <div className="absolute -inset-4 bg-gradient-to-r from-orange-600/10 to-amber-600/10 blur-3xl opacity-75 rounded-full mx-auto w-3/4"></div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold relative bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent drop-shadow-lg animate-pulse-slow">
               My Projects

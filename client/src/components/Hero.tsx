@@ -9,20 +9,20 @@ const Hero = () => {
 
   const floating_skills = [
     // Top row
-    { src: "/skills/frontend/html.png", pos: "top-[10%] left-[35%]" },
-    { src: "/skills/frontend/tailwind-css.png", pos: "top-[10%] right-[12%]" },
-    { src: "/skills/frontend/react.png", pos: "top-[8%] left-[7%] w-25" },
+    { src: "/skills/frontend/HTML5.svg", pos: "top-[10%] left-[35%]" },
+    { src: "/skills/frontend/Tailwind CSS.svg", pos: "top-[10%] right-[12%]" },
+    { src: "/skills/frontend/React.svg", pos: "top-[8%] left-[7%] w-25" },
 
     // Sides
-    { src: "/skills/frontend/javascript.png", pos: "top-[40%] left-[4%]" },
-    { src: "/skills/backend/nodejs.png", pos: "bottom-[25%] left-[6%]" },
-    { src: "/skills/backend/express.png", pos: "top-[30%] right-[6%] dark:invert" },
-    { src: "/skills/backend/mongodb.png", pos: "bottom-[35%] right-[8%]" },
+    { src: "/skills/frontend/JavaScript.svg", pos: "top-[40%] left-[4%]" },
+    { src: "/skills/backend/Node.js.svg", pos: "bottom-[25%] left-[6%]" },
+    { src: "/skills/backend/Express.svg", pos: "top-[30%] right-[6%] dark:invert" },
+    { src: "/skills/backend/MongoDB.svg", pos: "bottom-[35%] right-[8%]" },
 
     // Bottom row
-    { src: "/skills/frontend/typescript.png", pos: "bottom-[12%] left-[20%]" },
-    { src: "/skills/frontend/css-3.png", pos: "bottom-[10%] left-[50%]" },
-    { src: "/skills/frontend/nextjs.png", pos: "bottom-[10%] right-[15%] dark:invert" },
+    { src: "/skills/frontend/TypeScript.svg", pos: "bottom-[12%] left-[20%]" },
+    { src: "/skills/frontend/CSS3.svg", pos: "bottom-[10%] left-[50%]" },
+    { src: "/skills/frontend/Next.js.svg", pos: "bottom-[10%] right-[15%] dark:invert" },
   ];
 
   const [key, setKey] = useState<number>(0);
@@ -75,7 +75,7 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           className="text-4xl lg:text-6xl font-semibold text-center flex flex-col gap-7"
         >
-          <div role="button" onClick={() => setKey(prev => prev + 1)}>
+          <div role="button" onClick={() => setKey(prev => prev + 1)} className="cursor-pointer">
             <SplitText
               key={key}
               text="Muhammed Nowfal"

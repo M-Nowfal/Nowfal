@@ -10,60 +10,61 @@ const Skills = memo(() => {
     {
       name: "Frontend",
       skills: [
-        { img: "/skills/frontend/html.png", name: "HTML" },
-        { img: "/skills/frontend/css-3.png", name: "CSS" },
-        { img: "/skills/frontend/javascript.png", name: "JavaScript" },
-        { img: "/skills/frontend/typescript.png", name: "TypeScript" },
-        { img: "/skills/frontend/react.png", name: "React" },
-        { img: "/skills/frontend/nextjs.png", name: "Next.js" },
-        { img: "/skills/frontend/tailwind-css.png", name: "Tailwind CSS" },
-        { img: "/skills/frontend/bootstrap.png", name: "Bootstrap" },
+        { img: "/skills/frontend/HTML5.svg", name: "HTML" },
+        { img: "/skills/frontend/CSS3.svg", name: "CSS" },
+        { img: "/skills/frontend/JavaScript.svg", name: "JavaScript" },
+        { img: "/skills/frontend/TypeScript.svg", name: "TypeScript" },
+        { img: "/skills/frontend/React.svg", name: "React" },
+        { img: "/skills/frontend/Next.js.svg", name: "Next.js" },
+        { img: "/skills/frontend/Tailwind CSS.svg", name: "Tailwind CSS" },
+        { img: "/skills/frontend/Bootstrap.svg", name: "Bootstrap" },
       ]
     },
     {
       name: "Backend",
       skills: [
-        { img: "/skills/backend/nodejs.png", name: "Node.js" },
-        { img: "/skills/backend/express.png", name: "Express.js" },
-        { img: "/skills/backend/mongodb.png", name: "MongoDB" },
-        { img: "/skills/backend/rest-api.png", name: "REST API'S" },
+        { img: "/skills/backend/Node.js.svg", name: "Node.js" },
+        { img: "/skills/backend/Express.svg", name: "Express.js" },
+        { img: "/skills/backend/MongoDB.svg", name: "MongoDB" },
+        { img: "/skills/backend/rest-api.svg", name: "REST API'S" },
       ]
     },
     {
       name: "Tools",
       skills: [
-        { img: "/tools/vscode.png", name: "VS Code" },
-        { img: "/tools/github.png", name: "GitHub" },
-        { img: "/tools/chatgpt.png", name: "ChatGPT" },
-        { img: "/tools/vercel.png", name: "Vercel" },
-        { img: "/tools/vite.png", name: "Vite" },
-        { img: "/tools/git.png", name: "Git" },
-        { img: "/tools/openrouterai.png", name: "OpenRouter" },
+        { img: "/tools/vscode.svg", name: "VS Code" },
+        { img: "/tools/GitHub.svg", name: "GitHub" },
+        { img: "/tools/chatgpt.svg", name: "ChatGPT" },
+        { img: "/tools/Vercel.svg", name: "Vercel" },
+        { img: "/tools/Vite.js.svg", name: "Vite" },
+        { img: "/tools/Git.svg", name: "Git" },
+        { img: "/tools/openrouter.svg", name: "OpenRouter" },
+        { img: "/tools/npm.svg", name: "npm" }
       ]
     }
   ];
 
   const familiarSkills = [
     [
-      { src: "/familiar-with/python.png", alt: "Python" },
-      { src: "/familiar-with/java.png", alt: "Java" },
-      { src: "/familiar-with/c++.png", alt: "C++" },
-      { src: "/familiar-with/c.png", alt: "C" }
+      { src: "/familiar-with/Python.svg", alt: "Python" },
+      { src: "/familiar-with/Java.svg", alt: "Java" },
+      { src: "/familiar-with/C++.svg", alt: "C++" },
+      { src: "/familiar-with/C.svg", alt: "C" }
     ],
     [
-      { src: "/familiar-with/mysql.png", alt: "SQL" },
-      { src: "/familiar-with/docker.png", alt: "Docker" },
-      { src: "/familiar-with/php.png", alt: "PHP" },
-      { src: "/familiar-with/cs.png", alt: "C#" }
+      { src: "/familiar-with/MySQL.svg", alt: "SQL" },
+      { src: "/familiar-with/Docker.svg", alt: "Docker" },
+      { src: "/familiar-with/PHP.svg", alt: "PHP" },
+      { src: "/familiar-with/CS.svg", alt: "C#" }
     ]
   ];
 
   const shouldInvert = (category: string, index: number): boolean => {
     if (category === "Frontend" && index === 5)
       return true;
-    else if (category === "Backend" && index === 1)
+    else if (category === "Backend" && (index === 1 || index === 3))
       return true;
-    else if (category === "Tools" && (index === 1 || index === 3))
+    else if (category === "Tools" && (index >= 1  && index <= 3 || index === 6))
       return true;
     else
       return false;
@@ -73,7 +74,7 @@ const Skills = memo(() => {
     <section className="text-center pt-10 px-4 sm:px-6 lg:px-8" id="skills">
       <div className="pt-10"></div>
       {/* Header with orange gradient */}
-      <div className="relative mb-16" data-aos="fade-down">
+      <div className="relative mb-16" data-aos="fade-up">
         <div className="absolute -inset-4 bg-gradient-to-r from-orange-600/10 to-amber-600/10 blur-3xl opacity-75 rounded-full mx-auto w-3/4"></div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold relative bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent drop-shadow-lg animate-pulse-slow">
           My Skills
@@ -99,10 +100,9 @@ const Skills = memo(() => {
 
                   <figure
                     className={`
-                      p-4 bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-950/30 dark:to-amber-950/30 
-                      backdrop-blur-sm rounded-xl shadow-md hover:shadow-orange-500/20 transition-all duration-300 
-                      group-hover:bg-white/10 border border-orange-200 dark:border-orange-900/50 h-30 flex flex-col 
-                      items-center justify-center group hover:-translate-y-1 cursor-pointer scale-80 md:scale-100 w-full
+                      p-4 bg-orange-50 dark:bg-orange-950/30 rounded-xl shadow-md hover:shadow-orange-500/20 transition-all duration-300 
+                      hover:bg-orange-100 hover:dark:bg-orange-950/60 border border-orange-300 dark:border-orange-900/50 flex flex-col 
+                      items-center justify-center group hover:-translate-y-1 cursor-pointer w-25 h-30 md:w-full active:scale-90
                     `}
                     role="button"
                     onClick={() => navigator.vibrate && navigator.vibrate(50)}
