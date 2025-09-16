@@ -46,6 +46,16 @@ const Projects = () => {
       githubUrl: "https://github.com/M-Nowfal/Byte-Cart",
       liveUrl: "http://byte-cart.vercel.app/",
       technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS", "Authentication"]
+    }, 
+    {
+      id: 4,
+      title: "Once-upon-a-Code",
+      category: "Intermediate",
+      description: "Once-Upon-Code turns code into fun, kid-friendly stories that anyone can understand.",
+      image: "/projects/once-upon-a-code.webp",
+      githubUrl: "https://github.com/M-Nowfal/once-upon-a-code",
+      liveUrl: "https://once-upon-a-code.vercel.app/",
+      technologies: ["React","Tailwind CSS", "Open-Router", "TypeScript"]
     }
   ];
 
