@@ -2,7 +2,6 @@ import axios, { AxiosError } from 'axios';
 import { Send, X, Mail, Clock, User, Trash2, Reply } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from './ui/button';
 
 type MessageType = {
   _id: string,
