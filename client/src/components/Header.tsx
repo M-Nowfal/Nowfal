@@ -1,4 +1,4 @@
-import { Bell, Code, Contact, Folder, Home, Menu, User } from "lucide-react";
+import { Bell, Code, Contact, Eye, Folder, Home, Menu, User } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { Button } from "./ui/button";
 import {
@@ -12,6 +12,7 @@ import { useContext, useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
 import { MessageView } from "./MessageView";
 import { AuthContext } from "@/App";
+import ViewsCount from "./ViewsCount";
 
 type MessageType = {
   _id: string,
@@ -24,23 +25,38 @@ type MessageType = {
 const Header = () => {
   const { author, setAuthor } = useContext(AuthContext);
   const [showMessages, setShowMessages] = useState<boolean>(false);
+  const [showViews, setShowViews] = useState<boolean>(false);
   const [messages, setMessages] = useState<MessageType[]>([]);
+  const [views, setViews] = useState<Record<"createdAt", string>[]>([]);
 
   const getMessages = async () => {
     try {
-      if (window.localStorage.getItem("author") === "authorized") {
+      if (author) {
         const res = await axios.get(`${import.meta.env.VITE_API_URL}/messages`);
         setMessages(res.data.messages || []);
       } else return;
     } catch (err: unknown) {
       const error = err instanceof AxiosError ? err.response?.data?.message : String(err);
-      console.log(error);
+      console.error(error);
+    }
+  };
+
+  const getViews = async () => {
+    try {
+      if (author) {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/getviews`);
+        setViews(res.data || []);
+      } else return;
+    } catch (err: unknown) {
+      const error = err instanceof AxiosError ? err.response?.data?.message : String(err);
+      console.error(error);
     }
   };
 
   useEffect(() => {
     setAuthor(window.localStorage.getItem("author") === "authorized");
     getMessages();
+    getViews();
   }, [author]);
 
   const navLinkStyles = "flex items-center gap-1 hover:-translate-y-1 transition-all duration-200 hover:text-orange-600 text-shadow-lg dark:text-shadow-orange-900";
@@ -55,6 +71,10 @@ const Header = () => {
 
   const toggleShowMessages = () => {
     setShowMessages(prev => !prev);
+  };
+
+  const toggleShowViews = () => {
+    setShowViews(prev => !prev);
   };
 
   return (
@@ -91,15 +111,26 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          {author && <Button
-            variant="secondary"
-            size="icon"
-            className="relative cursor-pointer active:scale-80"
-            onClick={toggleShowMessages}
-          >
-            <Badge variant="default" className="rounded-full absolute top-0 right-0 py-0 px-0.5 text-[10px] bg-orange-500 text-white">{messages.length}</Badge>
-            <Bell />
-          </Button>}
+          {author && <>
+            <Button
+              variant="secondary"
+              size="icon"
+              className="relative cursor-pointer active:scale-80"
+              onClick={toggleShowViews}
+            >
+              <Badge variant="default" className="rounded-full absolute top-0 right-0 py-0 px-0.5 text-[10px] bg-orange-500 text-white">{views.length}</Badge>
+              <Eye />
+            </Button>
+            <Button
+              variant="secondary"
+              size="icon"
+              className="relative cursor-pointer active:scale-80"
+              onClick={toggleShowMessages}
+            >
+              <Badge variant="default" className="rounded-full absolute top-0 right-0 py-0 px-0.5 text-[10px] bg-orange-500 text-white">{messages.length}</Badge>
+              <Bell />
+            </Button>
+          </>}
           <ThemeToggle />
         </div>
       </header>
@@ -107,6 +138,12 @@ const Header = () => {
         messages={messages}
         toggleShowMessages={toggleShowMessages}
         setMessages={setMessages}
+      />}
+      {showViews && <ViewsCount 
+        count={views.length}
+        viewdAt={views}
+        isVisible={showViews}
+        onClose={toggleShowViews}
       />}
     </>
   );

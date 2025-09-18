@@ -26,7 +26,7 @@ const VerifyAdmin = () => {
       }
     } catch (err: unknown) {
       const error = err instanceof AxiosError ? err.response?.data?.message : String(err);
-      setError(error);
+      setError(error || "Something went wrong!");
     } finally {
       setLoading(false);
     }
