@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { Button } from "./ui/button";
 
@@ -16,7 +16,7 @@ interface ProjectType {
 };
 
 const Projects = () => {
-  const projects = [
+  const projects: ProjectType[] = [
     {
       id: 1,
       title: "BrainBridge E-Learning Platform",
@@ -46,7 +46,7 @@ const Projects = () => {
       githubUrl: "https://github.com/M-Nowfal/Byte-Cart",
       liveUrl: "http://byte-cart.vercel.app/",
       technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS", "Authentication"]
-    }, 
+    },
     {
       id: 4,
       title: "Once-upon-a-Code",
@@ -55,18 +55,15 @@ const Projects = () => {
       image: "/projects/once-upon-a-code.webp",
       githubUrl: "https://github.com/M-Nowfal/once-upon-a-code",
       liveUrl: "https://once-upon-a-code.vercel.app/",
-      technologies: ["React","Tailwind CSS", "Open-Router", "TypeScript"]
+      technologies: ["React", "Tailwind CSS", "Open-Router", "TypeScript"]
     }
   ];
 
   const [projectCategory, setProjectCategory] = useState<string>("Advanced");
-  const [filteredProjects, setFilteredProjetcs] = useState<ProjectType[]>(projects);
 
-  useEffect(() => {
-    if (projectCategory === "All")
-      setFilteredProjetcs(projects);
-    else
-      setFilteredProjetcs(projects.filter(project => project.category === projectCategory));
+  const filteredProjects: ProjectType[] = useMemo(() => {
+    if (projectCategory === "All") return projects;
+    return projects.filter(p => p.category === projectCategory);
   }, [projectCategory]);
 
   return (
