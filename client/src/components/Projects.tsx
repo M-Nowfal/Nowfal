@@ -19,13 +19,13 @@ const Projects = () => {
   const projects: ProjectType[] = [
     {
       id: 1,
-      title: "BrainBridge E-Learning Platform",
+      title: "CSHUB360 E-Learning Platform",
       category: "Advanced",
       description: "A MERN stack platform for sharing study materials, taking quizzes, tracking progress, and using AI-powered Q&A to support collaborative learning.",
-      image: "/projects/brain-bridge.webp",
-      githubUrl: "https://github.com/M-Nowfal/BrainBridge",
-      liveUrl: "https://brain-bridge-psi.vercel.app/",
-      technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "TypeScript"]
+      image: "/projects/cshub360.webp",
+      githubUrl: "https://github.com/M-Nowfal/CSHUB360",
+      liveUrl: "https://cshub360.vercel.app/",
+      technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "TypeScript", "OpenAI API", "JWT Authentication", "Shadcn UI"]
     },
     {
       id: 2,
@@ -49,7 +49,7 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Once-upon-a-Code",
+      title: "Once upon a Code",
       category: "Intermediate",
       description: "Once-Upon-Code turns code into fun, kid-friendly stories that anyone can understand.",
       image: "/projects/once-upon-a-code.webp",
