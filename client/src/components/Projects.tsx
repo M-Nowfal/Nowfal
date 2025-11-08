@@ -1,5 +1,3 @@
-"use client";
-
 import { useMemo, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { Button } from "./ui/button";
@@ -19,12 +17,12 @@ const Projects = () => {
   const projects: ProjectType[] = [
     {
       id: 1,
-      title: "CSHUB360 E-Learning Platform",
+      title: "GACVerse E-Learning Platform",
       category: "Advanced",
       description: "A MERN stack platform for sharing study materials, taking quizzes, tracking progress, and using AI-powered Q&A to support collaborative learning.",
-      image: "/projects/cshub360.webp",
-      githubUrl: "https://github.com/M-Nowfal/CSHUB360",
-      liveUrl: "https://cshub360.vercel.app/",
+      image: "/projects/GACVerse.webp",
+      githubUrl: "https://github.com/M-Nowfal/GACVERSE",
+      liveUrl: "https://gacverse.vercel.app/",
       technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "TypeScript", "OpenAI API", "JWT Authentication", "Shadcn UI"]
     },
     {
