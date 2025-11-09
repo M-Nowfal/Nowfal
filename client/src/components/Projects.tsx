@@ -20,7 +20,7 @@ const Projects = () => {
       title: "GACVerse E-Learning Platform",
       category: "Advanced",
       description: "A MERN stack platform for sharing study materials, taking quizzes, tracking progress, and using AI-powered Q&A to support collaborative learning.",
-      image: "/projects/GACVerse.webp",
+      image: "/projects/cshub360.webp",
       githubUrl: "https://github.com/M-Nowfal/GACVERSE",
       liveUrl: "https://gacverse.vercel.app/",
       technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "TypeScript", "OpenAI API", "JWT Authentication", "Shadcn UI"]
