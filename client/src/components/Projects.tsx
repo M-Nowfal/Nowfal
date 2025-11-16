@@ -49,11 +49,21 @@ const Projects = () => {
       id: 4,
       title: "Once upon a Code",
       category: "Intermediate",
-      description: "Once-Upon-Code turns code into fun, kid-friendly stories that anyone can understand.",
+      description: "Once-Upon-Code turns code into fun, kid-friendly stories that anyone can understand. Paste your code and get interesting stories.",
       image: "/projects/once-upon-a-code.webp",
       githubUrl: "https://github.com/M-Nowfal/once-upon-a-code",
       liveUrl: "https://once-upon-a-code.vercel.app/",
       technologies: ["React", "Tailwind CSS", "Open-Router", "TypeScript"]
+    },
+    {
+      id: 5,
+      title: "FreeTube",
+      category: "Basic",
+      description: "FreeTube lets you watch YouTube videos instantly by just pasting the link — clean, fast, and distraction-free. Drop a URL and enjoy smooth playback without the extra noise.",
+      image: "/projects/freetube.webp",
+      githubUrl: "https://github.com/M-Nowfal/FreeTube",
+      liveUrl: "https://free-tube-drab.vercel.app/",
+      technologies: ["React", "Tailwind CSS", "TypeScript", "localStorage"]
     }
   ];
 
