@@ -16,24 +16,14 @@ interface ProjectType {
 const Projects = () => {
   const projects: ProjectType[] = [
     {
-      id: 1,
-      title: "GACVerse E-Learning Platform",
-      category: "Advanced",
-      description: "A MERN stack platform for sharing study materials, taking quizzes, tracking progress, and using AI-powered Q&A to support collaborative learning.",
-      image: "/projects/cshub360.webp",
-      githubUrl: "https://github.com/M-Nowfal/GACVERSE",
-      liveUrl: "https://gacverse.vercel.app/",
-      technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "TypeScript", "OpenAI API", "JWT Authentication", "Shadcn UI"]
-    },
-    {
       id: 2,
       title: "FTC Finna Tuition Centre",
       category: "Advanced",
       description: "I built a web app for a tuition centre to manage student attendance, fee tracking, and faculty coordination. It provides a central dashboard for admins, making record-keeping easier, faster, and more transparent.",
       image: "/projects/ftc.webp",
-      githubUrl: "https://github.com/M-Nowfal/finna-tuition-centre",
-      liveUrl: "https://finna-tuition-centre-drab.vercel.app/",
-      technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"]
+      githubUrl: "https://github.com/M-Nowfal/FTC",
+      liveUrl: "https://ftc-kappa.vercel.app/",
+      technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS", "JWT", "Shadcn UI", "TypeScript"]
     },
     {
       id: 3,
@@ -58,7 +48,7 @@ const Projects = () => {
     {
       id: 5,
       title: "FreeTube",
-      category: "Basic",
+      category: "Intermediate",
       description: "FreeTube lets you watch YouTube videos instantly by just pasting the link — clean, fast, and distraction-free. Drop a URL and enjoy smooth playback without the extra noise.",
       image: "/projects/freetube.webp",
       githubUrl: "https://github.com/M-Nowfal/FreeTube",

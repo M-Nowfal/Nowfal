@@ -185,6 +185,8 @@ const About = () => {
           <Link
             to="/nowfalresume.pdf"
             download="Nowfal-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full md:w-3/6 flex items-center justify-center gap-2 px-6 py-3 cursor-pointer bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-amber-600 transition-all shadow-md hover:shadow-lg"
           >
             <Download size={18} />
