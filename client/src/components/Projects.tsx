@@ -16,6 +16,16 @@ interface ProjectType {
 const Projects = () => {
   const projects: ProjectType[] = [
     {
+      id: 1,
+      title: "Intelli-PDF",
+      category: "Advanced",
+      description: "Intelli PDF is a smart, web-based tool that simplifies working with PDF files. It allows users to upload any PDF and instantly extract insights, generate summaries, navigate content efficiently, and interact with the document through an AI-powered chat interface. Built with modern web technologies, it delivers fast performance, smooth UI, and a seamless document-processing experience — making it ideal for students, professionals, and anyone who works with PDFs regularly.",
+      image: "/projects/intelli-pdf.png",
+      githubUrl: "https://github.com/M-Nowfal/intelli-pdf",
+      liveUrl: "https://intelli-pdf.vercel.app/",
+      technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS", "Next Auth", "Shadcn UI", "TypeScript"]
+    },
+    {
       id: 2,
       title: "FTC Finna Tuition Centre",
       category: "Advanced",
