@@ -62,8 +62,8 @@ const Projects = () => {
       description: "FreeTube lets you watch YouTube videos instantly by just pasting the link — clean, fast, and distraction-free. Drop a URL and enjoy smooth playback without the extra noise.",
       image: "/projects/freetube.webp",
       githubUrl: "https://github.com/M-Nowfal/FreeTube",
-      liveUrl: "https://free-tube-drab.vercel.app/",
-      technologies: ["React", "Tailwind CSS", "TypeScript", "localStorage"]
+      liveUrl: "https://free-tube-gamma.vercel.app/",
+      technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"]
     }
   ];
 
