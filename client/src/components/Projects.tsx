@@ -64,6 +64,16 @@ const Projects = () => {
       githubUrl: "https://github.com/M-Nowfal/FreeTube",
       liveUrl: "https://free-tube-gamma.vercel.app/",
       technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"]
+    },
+    {
+      id: 6,
+      title: "Rubicks Cube Solver",
+      category: "Basic",
+      description: "An interactive Rubik’s Cube solver built with Three.js, featuring smooth 3D animations that visualize step-by-step solutions in real time for an engaging and intuitive experience.",
+      image: "/projects/cube-solver.webp",
+      githubUrl: "https://github.com/M-Nowfal/rubiks_cube_solver",
+      liveUrl: "https://m-nowfal.github.io/rubiks_cube_solver/",
+      technologies: ["HTML", "Tailwind CSS", "JavaScript", "Three.js", "Node.js"]
     }
   ];
 

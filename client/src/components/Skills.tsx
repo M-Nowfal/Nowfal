@@ -137,7 +137,7 @@ const Skills = memo(() => {
         <h2 className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500" data-aos="fade-up">
           Also Familiar With
         </h2>
-        <div className="m-auto max-w-6xl relative overflow-hidden mb-10">
+        <div className="m-auto max-w-xl relative overflow-hidden mb-10">
           <LogoLoop
             logos={familiarSkills[0]}
             speed={100}
@@ -151,7 +151,7 @@ const Skills = memo(() => {
             ariaLabel="Familiar skills"
           />
         </div>
-        <div className="m-auto max-w-6xl relative overflow-hidden">
+        <div className="m-auto max-w-xl relative overflow-hidden">
           <LogoLoop
             logos={familiarSkills[1]}
             speed={100}
