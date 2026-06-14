@@ -60,7 +60,7 @@ const Hero = () => {
           alt="Portfolio Image"
           loading="lazy"
           className="
-            sm:w-56 lg:w-96 
+            sm:w-56 lg:w-96 mt-12 md:mt-0
             drop-shadow-[15px_20px_20px_rgba(0,0,0,0.6)] 
             dark:drop-shadow-[0_0_25px_rgba(255,166,0,0.3)]
             animate-drift w-80 md:w-auto
