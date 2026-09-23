@@ -32,8 +32,8 @@ const Projects = () => {
       description: "I built a web app for a tuition centre to manage student attendance, fee tracking, and faculty coordination. It provides a central dashboard for admins, making record-keeping easier, faster, and more transparent.",
       image: "/projects/ftc.webp",
       githubUrl: "https://github.com/M-Nowfal/FTC",
-      liveUrl: "https://ftc-kappa.vercel.app/",
-      technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS", "JWT", "Shadcn UI", "TypeScript"]
+      liveUrl: "https://ftc-education.vercel.app/",
+      technologies: ["React", "MongoDB", "Tailwind CSS", "JWT", "Shadcn UI", "TypeScript"]
     },
     {
       id: 3,
